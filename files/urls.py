@@ -21,5 +21,6 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name = 'index'),
-    path('files/', views.files, name = 'files')
+    path('files/', views.files, name = 'files'),
+    path('file/<int:file_id>', views.file, name = 'file')
 ]
